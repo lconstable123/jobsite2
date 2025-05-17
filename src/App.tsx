@@ -67,7 +67,7 @@ function App() {
             </CarouselItem>
             <CarouselItem
               id="item2"
-              className="flex items-center justify-center"
+              className=" flex items-center justify-center"
             >
               <Page1 />
             </CarouselItem>
