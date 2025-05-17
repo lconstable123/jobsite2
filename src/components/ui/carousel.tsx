@@ -2,12 +2,11 @@ import * as React from "react";
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { ThickArrowLeftIcon } from "@radix-ui/react-icons";
-import ThickArrowLeft from "./ThickArrowLeft";
+
 import CaroselButton from "./CaroselButton";
 
 type CarouselApi = UseEmblaCarouselType[1];
@@ -178,7 +177,7 @@ function CarouselPrevious({
   size = "lg",
   ...props
 }: React.ComponentProps<typeof Button>) {
-  const { orientation, scrollNext, scrollPrev, canScrollPrev, canScrollNext } =
+  const { scrollNext, scrollPrev, canScrollPrev, canScrollNext } =
     useCarousel();
 
   return (
@@ -188,6 +187,7 @@ function CarouselPrevious({
       canScrollPrev={canScrollPrev}
       canScrollNext={canScrollNext}
       side="left"
+      {...props}
     />
   );
 }

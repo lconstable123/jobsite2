@@ -9,12 +9,7 @@ import {
 import Page1 from "./assets/components/Page1";
 import EntryForm from "./assets/components/EntryForm";
 
-import {
-  useActiveIdContext,
-  useJobItem,
-  usePageContext,
-  useSiteHelpers,
-} from "./assets/components/lib/hooks";
+import { usePageContext, useSiteHelpers } from "./assets/components/lib/hooks";
 import Banner from "./assets/components/AtomicComponents/banner";
 import { useEffect, useState } from "react";
 import Page0 from "./assets/components/Page0";

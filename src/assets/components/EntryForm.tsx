@@ -36,7 +36,7 @@ const EntryForm = forwardRef<HTMLInputElement, EntryFormProps>(
       };
     }, [page]);
 
-    const bannerUp = isUp ? "top-[10%]" : "-top-15";
+    const bannerUp = isUp ? "top-[9%]" : "-top-15";
 
     return (
       <>

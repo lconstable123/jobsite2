@@ -1,9 +1,8 @@
 import { createPortal } from "react-dom";
-import { contributors } from "../lib/constants";
+
 import { useEffect, useState } from "react";
-import PageContextProvider from "../contexts/pageContextProvider";
+
 import { usePageContext } from "../lib/hooks";
-import toast from "react-hot-toast";
 
 export default function PortalTest() {
   const portalRoot = document.getElementById("portal");

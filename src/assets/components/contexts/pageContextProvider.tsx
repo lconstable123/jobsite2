@@ -1,8 +1,7 @@
-import { createContext, use, useState } from "react";
-import toast from "react-hot-toast";
+import { createContext, useState } from "react";
+
 import type { PaginationDirection } from "../lib/types";
 import { useCarousel } from "../lib/hooks";
-import type { UseEmblaCarouselType } from "embla-carousel-react";
 
 type pageContextProviderProps = {
   page: number;
@@ -35,10 +34,9 @@ export default function PageContextProvider({
   const [toggle1, setToggle1] = useState(true);
   const [bookmarksWindow, setBookmarksWindow] = useState(false);
 
-  const { api, setApi, handleClicker, page, scrollNext, scrollPrev } =
-    useCarousel();
+  const { api, setApi, page, scrollNext, scrollPrev } = useCarousel();
 
-  const handleChangePage = (direction: PaginationDirection) => {
+  const handleChangePage = () => {
     // toast.success(`moving pageddd ${direction}`);
     // if (direction === "next") {
     //   SetPage((prevPage) => prevPage + 1);

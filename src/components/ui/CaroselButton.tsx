@@ -1,4 +1,3 @@
-import toast from "react-hot-toast";
 import ThickArrowLeft from "./ThickArrowLeft";
 
 type CarouselbuttonProps = {

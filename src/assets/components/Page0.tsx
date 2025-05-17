@@ -1,6 +1,5 @@
-import toast from "react-hot-toast";
 import { skills } from "./lib/constants";
-import { contributors } from "./lib/constants";
+
 import SkillComponents from "./SkillComponents";
 import { usePageContext } from "./lib/hooks";
 

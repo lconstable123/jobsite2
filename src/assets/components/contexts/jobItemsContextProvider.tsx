@@ -3,7 +3,6 @@ import { createContext, useEffect, useMemo, useState } from "react";
 import type { TJobItem, PaginationDirection, SortBy } from "../lib/types";
 import { useSearchTextContext, useTextQuery } from "../lib/hooks";
 import { RESULTS_PER_PAGE } from "../lib/constants";
-import toast from "react-hot-toast";
 
 type jobItemsContextProviderProps = {
   jobItems: TJobItem[];

@@ -1,6 +1,6 @@
 export default function ThickArrowLeft({
   size = 20,
-  fill = true,
+
   color = "currentColor",
   side,
 }: {

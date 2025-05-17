@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PinkLines({
   position,
   isUp,
@@ -20,10 +18,10 @@ export default function PinkLines({
     return (
       <div id="top" className="">
         <div
-          className={` overflow-hidden duration-700 transition-all absolute top-60 ${styleIn}  border-red-200`}
+          className={` overflow-hidden duration-700 transition-all absolute top-60 ${styleIn}  border-red-100`}
         >
-          <div className="h-10 w-screen bg-red-300  "></div>
-          <div className="mt-3 top-72 h-2 w-screen bg-red-300"></div>
+          <div className="h-10 w-screen bg-red-100 border-t-3 border-red-300  "></div>
+          <div className="mt-3 top-72 h-2 w-screen bg-red-100 border-b-3 border-red-300"></div>
         </div>
       </div>
     );
@@ -34,10 +32,10 @@ export default function PinkLines({
         className="absolute overflow-hidden h-full w-full top-0 left-0 "
       >
         <div
-          className={` overflow-hidden duration-700 transition-all absolute bottom-60 z-1 ${styleIn}`}
+          className={` overflow-hidden duration-700 transition-all absolute bottom-60 z-1 border-t-3 border-red-300 ${styleIn}`}
         >
-          <div className=" overflow-hidden  h-2 w-screen bg-red-300"></div>
-          <div className=" overflow-hidden mt-3 h-10 w-screen bg-red-300"></div>
+          <div className=" overflow-hidden  h-2 w-screen bg-red-100"></div>
+          <div className=" overflow-hidden mt-3 h-10 w-screen bg-red-100 border-b-3 border-red-300"></div>
         </div>
       </div>
     );

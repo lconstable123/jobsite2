@@ -13,7 +13,7 @@ import {
   useJobItemsContext,
   usePageContext,
 } from "./lib/hooks";
-import Shelf from "@/assets/components/BookmarksShelf";
+
 import PortalTest from "./AtomicComponents/PortalTest";
 import BookmarksCorner from "./BookmarkCorner";
 import BookmarksButton from "./BookmarksButton";

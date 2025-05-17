@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { UsePageContext } from "./lib/hooks";
+import { usePageContext } from "./lib/hooks";
 type ContainerProps = {
   children: React.ReactNode;
   pagenum: number;
@@ -10,7 +10,7 @@ export default function ContainerReactive({
 }: ContainerProps) {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const [transform, setTransform] = React.useState("translateX(0px)");
-  const { page } = UsePageContext();
+  const { page } = usePageContext();
   useEffect(() => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.offsetWidth;

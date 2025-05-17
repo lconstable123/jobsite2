@@ -1,8 +1,8 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
-import type { PaginationDirection } from "./lib/types";
+
 import { usePageContext } from "./lib/hooks";
 
-export function NavButton(direction: PaginationDirection) {
+export function NavButton({ direction }: { direction: "prev" | "next" }) {
   const { handleChangePage } = usePageContext();
 
   return (
