@@ -34,10 +34,10 @@ export default function JobDetails() {
       ></div>
 
       <div
-        className=" relative bg-[url('curve@1x-1.0s-77px-77px.svg')] bg-[length:10%_10%]   w-full h-full rounded-md ring-2 ring-amber-200 flex flex-col overflow-hidden "
+        className=" relative bg-[url('/curve@1x-1.0s-77px-77px.svg')] bg-[length:10%_10%]   w-full h-full rounded-md ring-2 ring-amber-200 flex flex-col overflow-hidden "
         onClick={handleclick}
       >
-        <div className="relative top-100   z-11 flex items-center justify-center ">
+        <div className="absolute bottom-0 left-60   z-11 flex items-center justify-center ">
           <Flames />
         </div>
 
