@@ -44,7 +44,7 @@ export default function PortalTest() {
           <div className="   w-full h-full rounded-t-4xl z-30  bg-gray-50 flex flex-col items-center pt-4 text-gray-800">
             {/* <div className="absolute top-0 w-full h-3 bg-amber-300 z-0" /> */}
             <div className="   bg-white relative underline uppercase rounded-4xl px-5 py-1 font-family-inter  font-medium  text-2xl flex items-center border-1  border-double border-rose-200">
-              <a href="www.lukeconstable.com">VirtuallyAnything.xyz</a>
+              <a href="https://www.lukeconstable.com/">VirtuallyAnything.xyz</a>
             </div>
             <div className="relative uppercase  rounded-2xl font-family-inter px-3 py-1 font-light mt-1 text-[8pt] flex items-center border-rose-200">
               Api mechanics courtesy of &nbsp;
