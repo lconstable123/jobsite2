@@ -41,8 +41,9 @@ export default function JobDetail({
           {jobItem?.qualifications.slice(0, 7).map((qualification, index) => {
             return (
               <div
+                style={{ animationDelay: `${index * 0.1}s` }}
                 key={index}
-                className=" text-gray-700 text-xs  py-1 px-4  rounded-xl mx-1 mt-1    bg-gray-50 "
+                className=" text-gray-700 text-xs  py-1 px-4  rounded-xl mx-1 mt-1 pausebounce   bg-gray-50 "
               >
                 {qualification}
               </div>
@@ -64,6 +65,7 @@ export default function JobDetail({
             {jobItem?.reviews.map((review, index) => {
               return (
                 <div
+                  style={{ animationDelay: `${index * 0.1}s` }}
                   key={index}
                   className="text-center  italic flex items-center  text-gray-700 text-xs rounded-xl  px-2 py-1 bg-gray-50"
                 >
