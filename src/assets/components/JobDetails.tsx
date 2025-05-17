@@ -43,7 +43,7 @@ export default function JobDetails() {
 
         <div
           id="detail"
-          className="origin-top transition-all duration-250 pt-10 flex items-start justify-center  "
+          className="origin-top transition-all duration-250 pt-10 flex items-start justify-center h-full  "
         >
           {(isLoading || isLoading2) && <LoadingJobContent />}
           {!isLoading && !isLoading2 && jobItem && (
@@ -92,7 +92,7 @@ function EmptyJobContent({
     };
   }, [noSearchText, isLoading, totalNumberOfResults]);
   return (
-    <section className=" font-light text-xl flex items-center justify-center w-full h-full p-4 rounded-md   z-100 starting:scale-0   ">
+    <section className="relative  font-light text-xl flex items-center justify-center w-full h-full p-4 rounded-md   z-100 starting:scale-0   ">
       <div
         className={` transition-all duration-250 flex uppercase items-center justify-center border-1  py-2 px-4 border-amber-200 bg-white rounded-xl gap-2 ${loadstyle}`}
       >
@@ -106,7 +106,7 @@ function EmptyJobContent({
 
 function LoadingJobContent() {
   return (
-    <section className="w-full h-full p-4 rounded-md   z-100   ">
+    <section className="w-full h-full flex justify-center align-center p-4 rounded-md   z-100   ">
       <Spinner />
       {/* <Scanner /> */}
     </section>

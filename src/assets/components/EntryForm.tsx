@@ -24,7 +24,7 @@ const EntryForm = forwardRef<HTMLInputElement, EntryFormProps>(
       if (page === 1) {
         timer = setTimeout(() => {
           setIsUp(true);
-        }, 500);
+        }, 800);
       } else {
         timer = setTimeout(() => {
           setIsUp(false);
