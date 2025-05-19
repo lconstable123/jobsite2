@@ -30,11 +30,11 @@ export default function JobDetails() {
   return (
     <>
       <div
-        className={`transition-all duration-400 absolute w-full h-full bg-amber-100 ${fadeOut} z-400 pointer-events-none`}
+        className={`transition-all duration-400 absolute min-w-200 basis-1/2 h-full bg-amber-100 ${fadeOut} z-400 pointer-events-none`}
       ></div>
 
       <div
-        className=" relative bg-[url('/curve@1x-1.0s-77px-77px.svg')] bg-[length:10%_10%]   w-full h-full rounded-md ring-2 ring-amber-200 flex flex-col overflow-hidden "
+        className=" relative bg-[url('/curve@1x-1.0s-77px-77px.svg')] bg-[length:10%_10%]   w-full h-full rounded-md  ring-2 ring-amber-200 flex flex-col overflow-hidden "
         onClick={handleclick}
       >
         <div className="absolute bottom-0 left-60   z-11 flex items-center justify-center ">

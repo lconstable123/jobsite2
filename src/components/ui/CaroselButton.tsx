@@ -15,7 +15,10 @@ export default function CaroselButton({
   canScrollNext,
   side,
 }: CarouselbuttonProps) {
-  const sideStyle = side === "left" ? "top-1/2 left-10" : "top-1/2 right-10";
+  const sideStyle =
+    side === "left"
+      ? "-bottom-60 sm:bottom-5 left-2 lg:left-10"
+      : "-bottom-60  sm:bottom-5 right-2 lg:right-10";
   const activeStyle =
     side === "left"
       ? !canScrollPrev
@@ -39,7 +42,7 @@ export default function CaroselButton({
     <button
       disabled={false}
       onClick={side === "left" ? handleScrollPrev : handleScrollNext}
-      className={`absolute  w-15 h-30 -translate-y-1/2 bg-rose-200 rounded-full border-3 border-white shadow-xl z-500  ${sideStyle} ${activeStyle} transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl`}
+      className={`hidden sm:block absolute  w-15 h-30 -translate-y-1/2 bg-rose-200 rounded-full border-3 border-white shadow-xl z-500  ${sideStyle} ${activeStyle} transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl scale-70 lg:scale-100`}
     >
       <div
         className=" w-full

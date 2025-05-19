@@ -44,7 +44,7 @@ function App() {
   const height = !isUp ? "h-15" : "h-80";
 
   return (
-    <>
+    <div className="w-screen h-screen overflow-hidden relative">
       <Banner pos={"top"} height={height} />
       {/* <BackgroundParticles /> */}
 
@@ -93,7 +93,7 @@ function App() {
       </div>
       <PinkLines position="bottom" isUp={isUp} />
       <Banner pos={"bottom"} height={height} />
-    </>
+    </div>
   );
 }
 

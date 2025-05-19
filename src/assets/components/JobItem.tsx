@@ -21,7 +21,9 @@ export default function JobItem({
   isAnimated?: boolean;
 }) {
   const [mouseOver, setMouseOver] = useState(false);
-  const mouseOverStyle = mouseOver ? "translate-x-4" : "translate-x-0";
+  const mouseOverStyle = mouseOver
+    ? "translate-x-2 md:translate-x-4"
+    : "translate-x-0";
   const [transIn, setTransIn] = useState("-translate-x-100");
 
   const delay = Math.round((index + 1) ** listDelay) * time + 1;
@@ -54,7 +56,7 @@ export default function JobItem({
         onMouseEnter={() => setMouseOver(true)}
         onMouseLeave={() => setMouseOver(false)}
         id="posting"
-        className={`transform transition-all ${duration} font-family-inter ${transIn}  border-amber-500 pl-4 pr-2 py-1 ${activeStyling} `}
+        className={`text-[5pt] sm:text-[9pt] transform transition-all ${duration} font-family-inter ${transIn}  border-amber-500 pl-2 md:pl-4 pr-2 py-1 ${activeStyling} `}
       >
         <a href={`#${jobItem.id}`} className="flex justify-between  ">
           <div
@@ -67,7 +69,7 @@ export default function JobItem({
           <div className="flex gap-1  justify-between items-center cursor-default">
             <div
               id="daysAgo"
-              className="text-[7pt] border p-1  h-4 flex  items-center border-gray-200 rounded-xl"
+              className="text-[5pt] sm:text-[7pt]  border-0 sm:border-1 p-1  h-4 flex  items-center border-gray-200 rounded-xl"
             >
               {jobItem.daysAgo} {+jobItem.daysAgo > 1 ? "days ago" : "day ago"}
             </div>

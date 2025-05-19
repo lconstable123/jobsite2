@@ -16,7 +16,11 @@ export default function TopBookmark({
   handleAnimationEnd: () => void;
 }) {
   return (
-    <div className="absolute top-1 right-10  z-500 flex items-center justify-center">
+    <div
+      className="absolute top-8
+       sm:top-1 right-10  z-500 flex items-center justify-center
+    -"
+    >
       <div
         id="bk"
         className={twMerge(

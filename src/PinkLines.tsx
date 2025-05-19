@@ -8,7 +8,7 @@ export default function PinkLines({
   const styleIn =
     position === "top"
       ? isUp
-        ? "translate-y-0"
+        ? "md:translate-y-0"
         : "-translate-y-80"
       : isUp
       ? "translate-y-0"
@@ -18,7 +18,7 @@ export default function PinkLines({
     return (
       <div id="top" className="">
         <div
-          className={` overflow-hidden duration-700 transition-all absolute top-60 ${styleIn}  border-red-100`}
+          className={` overflow-hidden duration-700 transition-all absolute  top-20 md:top-50 ${styleIn}  border-red-100`}
         >
           <div className="h-10 w-screen bg-red-100 border-t-3 border-red-300  "></div>
           <div className="mt-3 top-72 h-2 w-screen bg-red-100 border-b-3 border-red-300"></div>
@@ -27,15 +27,12 @@ export default function PinkLines({
     );
   } else {
     return (
-      <div
-        id="bottom"
-        className="absolute overflow-hidden h-full w-full top-0 left-0 "
-      >
+      <div id="top" className="">
         <div
-          className={` overflow-hidden duration-700 transition-all absolute bottom-60 z-1 border-t-3 border-red-300 ${styleIn}`}
+          className={`z-20 overflow-hidden duration-700 transition-all absolute  bottom-20 md:bottom-50 ${styleIn}  border-red-100`}
         >
-          <div className=" overflow-hidden  h-2 w-screen bg-red-100"></div>
-          <div className=" overflow-hidden mt-3 h-10 w-screen bg-red-100 border-b-3 border-red-300"></div>
+          <div className=" top-72 h-2 w-screen bg-red-100 border-t-3 border-red-300"></div>
+          <div className="h-10 w-screen bg-red-100 border-b-3 mt-3 border-red-300  "></div>
         </div>
       </div>
     );

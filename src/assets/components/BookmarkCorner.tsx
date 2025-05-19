@@ -11,7 +11,7 @@ export default function BookmarksCorner({
   jobItem: JobItemDetails | undefined;
 }) {
   const [bubbleScale, setBubbleScale] = useState("fadeOut");
-  let bookmarkscale = jobItem ? "scale-100" : "scale-0";
+  let bookmarkscale = jobItem ? "scale-90 sm:scale-100" : "scale-0";
   const { bookmarkedIds, lastStored } = useBookmarksContext();
 
   const clickEvent = () => {
