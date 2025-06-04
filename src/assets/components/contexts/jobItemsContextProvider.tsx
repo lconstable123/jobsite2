@@ -18,7 +18,6 @@ type jobItemsContextProviderProps = {
   error?: string;
   JobItemsAnimations: boolean;
   transitionJobList: boolean;
-  //   handleSetJobItems: (item: JobItem) => void;
 };
 
 export const JobItemsContext =
@@ -29,7 +28,6 @@ export default function JobItemsContextProvider({
 }: {
   children: React.ReactNode;
 }) {
-  //   const [jobItems, setJobItems] = useState<JobItem[]>([]);
   const { debouncedSearchText } = useSearchTextContext();
   const { jobItems, isLoading, isFetching } = useTextQuery(debouncedSearchText);
   const [sortBy, setSortBy] = useState<SortBy>("relevant");
@@ -38,6 +36,8 @@ export default function JobItemsContextProvider({
   const [transitionJobList, setTransitionJobList] = useState(false);
   const totalNumberOfResults = jobItems?.length || 0;
   const totalNumberOfPages = Math.ceil(totalNumberOfResults / RESULTS_PER_PAGE);
+
+  //derived states
 
   const jobItemsSorted = useMemo(
     () =>
@@ -56,6 +56,8 @@ export default function JobItemsContextProvider({
       currentPage * RESULTS_PER_PAGE - RESULTS_PER_PAGE,
       currentPage * RESULTS_PER_PAGE
     ) || [];
+
+  //handles
 
   const handleChangeSortBy = (newSortBy: SortBy) => {
     if (transitionJobList) return;

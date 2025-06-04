@@ -5,7 +5,9 @@ type EntryFormProps = {
   prompting: boolean;
 };
 
+//------------------------------------------------------------------->
 const EntryForm = forwardRef<HTMLInputElement, EntryFormProps>(
+  //------------------------------------------------------------------->
   ({ prompting }, ref) => {
     const { searchText, handleChangeSearchText } = useSearchTextContext();
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

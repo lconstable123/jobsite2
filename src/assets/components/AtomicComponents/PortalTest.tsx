@@ -55,7 +55,6 @@ export default function PortalTest() {
           </div>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 w-full h-2 bg-amber-300 border-t-1 border-amber-200" /> */}
     </div>,
     portalRoot
   );

@@ -164,26 +164,57 @@ export const useCarousel = () => {
   return { api, setApi, handleClicker, page, scrollNext, scrollPrev } as const;
 };
 
-export const useSiteHelpers = (page: number) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+export const useAnimationDelay = (trigger: number, delay: number = 100) => {
+  const [isUp, setIsUp] = useState(false);
+
+  useEffect(() => {
+    let timer: ReturnType<typeof setTimeout> | null = null;
+    if (trigger === 0) {
+      timer = setTimeout(() => {
+        setIsUp(true);
+      }, delay);
+    } else {
+      timer = setTimeout(() => {
+        setIsUp(false);
+      }, delay);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
+  }, [trigger]);
+
+  return { isUp } as const;
+};
+
+//-----------------------------------------------------------------------------------FOR DEMO
+
+export const useSiteHelpers = (
+  // --> Returns a ref to focus and logic to handle initial prompting animation.
+  // <-- Provide the page, intended page status for prompting, and prompt delay.
+  page: number,
+  promptingPage: number = 1,
+  delay: number = 500
+) => {
+  const focusComponent = useRef<HTMLInputElement>(null);
   const { searchText } = useSearchTextContext();
   const { prompt, handleSetPrompt } = usePageContext();
+  const IsPrompting = page === promptingPage && prompt === 1;
 
-  const IstextFieldPrompting = page === 1 && prompt === 1;
   useEffect(() => {
     let startAnimation: ReturnType<typeof setTimeout>;
+
     const handleClick = (e: MouseEvent) => {
       e.stopPropagation();
       handleSetPrompt(0);
     };
 
-    inputRef.current?.focus();
+    focusComponent.current?.focus();
 
-    if (page === 1) {
+    if (page === promptingPage) {
       document.addEventListener("click", handleClick);
       startAnimation = setTimeout(() => {
         handleSetPrompt(1);
-      }, 500);
+      }, delay);
     }
 
     return () => {
@@ -196,8 +227,10 @@ export const useSiteHelpers = (page: number) => {
     handleSetPrompt(0);
   }, [searchText]);
 
-  return { inputRef, IstextFieldPrompting };
+  return { focusComponent, IsPrompting };
 };
+
+//------------------------------------------------------------------------------------------END DEMO
 
 export function useActiveId() {
   const [activeId, setActiveId] = useState<number | null>(null);
