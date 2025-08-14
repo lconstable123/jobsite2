@@ -1,8 +1,7 @@
 # Job Search App
 
 This is a job search app that allows users to browse, search, and bookmark job listings.
-
-## I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skills. I ended up reinventing the app and adding new components and features that I believe significantly improve the user experience.
+I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skills. I ended up reinventing the app and adding new components and features that I believe significantly improve the user experience.
 
 ## 🚀 Built With
 
@@ -34,7 +33,7 @@ Instead of traditional vertical scrolling, I implemented a horizontal navigation
 
 This custom hook is one of my favorite additions.
 
-It uses **forward references** to expose DOM elements and provides programmatic focus control. This enhances accessibility — allowing users to interact more smoothly with input prompts or modals. You’ll find it in `hooks.ts`.
+It uses **forward references** to expose DOM elements and provides programmatic focus control. This enhances accessibility, allowing users to interact more smoothly with input prompts or modals. It's in `hooks.ts`.
 
 ---
 
