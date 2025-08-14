@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-chestnut: #7b3f00;
+  --font-family-oswald: "Oswald", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
+}
+
+/* @layer base {
+  BODY {
+    font-family: "Inter", sans-serif;
+  }
+} */
+
+@layer base {
+  BODY {
+    font-family: "Oswald", sans-serif;
+    /* font-family: "Inter", sans-serif; */
+  }
+}
+
+@layer components {
+  .backgroundSplash {
+    @apply flex flex-col items-center justify-center h-screen bg-red-300;
+  }
+
+  .backgroundLines {
+    @apply flex flex-col items-center justify-center h-screen bg-[url('src\assets\Maze.svg')] bg-cover bg-center w-full {
+    }
+  }
+
+  .start-scaleanim {
+    @apply duration-400 starting:scale-0 ease-in-out;
+  }
+
+  .wee {
+    @apply bg-amber-300;
+  }
+
+  .jobDetailsBox {
+    @apply flex justify-evenly  rounded-2xl mx-10 mt-4   bg-white border-1 border-rose-200;
+  }
+}
+
+@layer utility {
+}
+
+@keyframes fadeIn {
+  0% {
+    scale: 70%;
+    opacity: 1;
+  }
+  /* 70% {
+    opacity: 1;
+  } */
+  100% {
+    scale: 120%;
+    opacity: 0;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: end;
+}
+
+.fadeOut {
+  scale: 70%;
+  opacity: 0;
+  animation-fill-mode: end;
+}
+
+@keyframes slowbounce {
+  0% {
+    scale: 100%;
+  }
+  50% {
+    scale: 110%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+@keyframes pausebounce {
+  60% {
+    scale: 100%;
+  }
+  70% {
+    scale: 115%;
+  }
+  80% {
+    scale: 115%;
+  }
+  90% {
+    scale: 97%;
+  }
+  100% {
+    scale: 100%;
+  }
+}
+
+.slowbounce {
+  animation: slowbounce 3.5s ease-in-out infinite;
+}
+.fastbounce {
+  animation: slowbounce 1s ease-out infinite;
+}
+.pausebounce {
+  animation: pausebounce 2s ease-out infinite;
+}
+
+@keyframes scan {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+@keyframes scan2 {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+.scan {
+  animation: scan 2s ease-in-out infinite;
+}
+
+.scan2 {
+  animation: scan2 2s ease-in-out infinite;
+}
+
+.sharp-shadow {
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1); /* No blur */
+}
+
+@keyframes radiate-line {
+  0% {
+    box-shadow: 0 0 0 0 rgb(190, 99, 99);
+    opacity: 0;
+
+    border: solid 2px rgb(255, 255, 255);
+  }
+  20% {
+    box-shadow: 0 0 0 0 rgb(117, 55, 55);
+    opacity: 1;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(248, 246, 246, 0);
+    opacity: 0;
+  }
+}
+
+.radiate-line {
+  animation: radiate-line 1.2s ease-out infinite;
+}
+
+@keyframes float-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(120vw);
+  }
+}
+
+.floatx {
+  animation: float-x 20s linear infinite;
+}
