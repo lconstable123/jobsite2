@@ -1,54 +1,53 @@
-# React + TypeScript + Vite
+# Job Search App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a job search app that allows users to browse, search, and bookmark job listings.
 
-Currently, two official plugins are available:
+I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skills. However, I ended up reinventing the app from the ground up — adding new components and features that I believe significantly improve the user experience. It has evolved into a project I'm proud to share as a demonstration of my frontend development work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Built With
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Vite**
+- **TypeScript**
+- **Embla Carousel**
+- **React Icons**
+- **Radix UI**
+- **TanStack (React Query)**
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧠 Key Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🔁 Page Carousel Navigation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Instead of traditional vertical scrolling, I implemented a horizontal navigation carousel. It gives the app a unique, intuitive feel — more like browsing slides than scrolling a page.
+
+### 🧩 Contexts for State Management
+
+- **`ActiveIdContext`** – Tracks the currently focused job.
+- **`BookmarksContext`** – Manages bookmarked job listings.
+- **`JobItemsContext`** – Handles fetched job data and utilities like pagination.
+- **`SearchTextContext`** – Tracks the user's search input with a built-in debounce to reduce unnecessary fetches.
+
+---
+
+## 🛠 Custom Hook: `useStepHelpers`
+
+This custom hook is one of my favorite additions.
+
+It uses **forward references** to expose DOM elements and provides programmatic focus control. This enhances accessibility — allowing users to interact more smoothly with input prompts or modals. You’ll find it in `hooks.ts`.
+
+---
+
+## 📦 Folder Structure Highlights
+
+```bash
+src/
+├── components/
+├── context/
+├── hooks/
+├── pages/
+├── types/
+└── App.tsx
 ```
