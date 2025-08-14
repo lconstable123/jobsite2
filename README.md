@@ -2,9 +2,7 @@
 
 This is a job search app that allows users to browse, search, and bookmark job listings.
 
-I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skills. However, I ended up reinventing the app from the ground up — adding new components and features that I believe significantly improve the user experience. It has evolved into a project I'm proud to share as a demonstration of my frontend development work.
-
----
+## I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skills. I ended up reinventing the app and adding new components and features that I believe significantly improve the user experience.
 
 ## 🚀 Built With
 
@@ -21,7 +19,7 @@ I initially followed a Bytegrad tutorial to refresh my toolkit and frontend skil
 
 ### 🔁 Page Carousel Navigation
 
-Instead of traditional vertical scrolling, I implemented a horizontal navigation carousel. It gives the app a unique, intuitive feel — more like browsing slides than scrolling a page.
+Instead of traditional vertical scrolling, I implemented a horizontal navigation carousel which feels more inuitive to me.
 
 ### 🧩 Contexts for State Management
 
