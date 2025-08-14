@@ -10,7 +10,8 @@ import PinkLines from "./assets/components/PinkLines";
 import PageCarousel from "./assets/components/PageCarousel";
 
 function App() {
-  const { page } = usePageContext();
+  const { page, fontsLoaded } = usePageContext();
+
   {
     /* //-------------------------------------------------------------------------------------------------------FOR DEMO */
   }
@@ -29,7 +30,7 @@ function App() {
         {/* //-------------------------------------------------------------------------------------------------------FOR DEMO */}
         <EntryForm prompting={IsPrompting} ref={focusComponent} />
         {/* //-------------------------------------------------------------------------------------------------------FOR DEMO */}
-        <PageCarousel />
+        {fontsLoaded && <PageCarousel />}
         <Toaster position="bottom-right" />
       </div>
       <PinkLines position="bottom" isUp={isUp} />

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import type { PaginationDirection } from "../lib/types";
 import { useCarousel } from "../lib/hooks";
@@ -20,6 +20,7 @@ type pageContextProviderProps = {
   scrollPrev: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
+  fontsLoaded: boolean;
 };
 
 export const PageContext = createContext<pageContextProviderProps | null>(null);
@@ -35,6 +36,12 @@ export default function PageContextProvider({
   const [bookmarksWindow, setBookmarksWindow] = useState(false);
 
   const { api, setApi, page, scrollNext, scrollPrev } = useCarousel();
+  const [fontsLoaded, setFontsLoaded] = useState(false);
+  useEffect(() => {
+    document.fonts.ready.then(() => {
+      setFontsLoaded(true);
+    });
+  }, []);
 
   const handleChangePage = () => {
     // toast.success(`moving pageddd ${direction}`);
@@ -87,6 +94,7 @@ export default function PageContextProvider({
         canScrollPrev,
         scrollNext,
         scrollPrev,
+        fontsLoaded,
       }}
     >
       {children}
